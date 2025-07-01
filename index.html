@@ -4,18 +4,37 @@
     <meta charset="UTF-8" />
     <meta
       http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
+      content="default-src 'self'; script-src 'self'; media-src 'self' blob:"
     />
     <meta
       http-equiv="X-Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
     />
+
     <title>Hello from Electron renderer!</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello from Electron renderer!</h1>
-    <p>👋</p>
-    <p id="info"></p>
+    <h1>Camera capture</h1>
+
+    <div class="camera-wrapper">
+      <video id="video" autoplay playsinline></video>
+    </div>
+
+    <button id="captureBtn">Capture Image</button>
+    <input
+      type="file"
+      id="importInput"
+      accept="image/*"
+      style="margin: 10px 0"
+    />
+
+    <canvas id="canvas" style="display: none"></canvas>
+
+    <img src="" alt="Captured Image" id="preview" style="display: none" />
+
+    <a id="downloadLink" style="display: none">Download</a>
+
+    <script src="renderer.js"></script>
   </body>
-  <script src="./renderer.js"></script>
 </html>

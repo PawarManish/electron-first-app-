@@ -29,14 +29,15 @@ module.exports = {
       name: "@electron-forge/publisher-github",
       config: {
         repository: {
-          owner: "PawarManish", // ✅ your GitHub username (no space)
-          name: "electron-first-app-", // ✅ your repo name (no `.git`)
+          owner: "PawarManish", // ✅ exactly as shown on GitHub
+          name: "electron-first-app-", // ✅ including that trailing dash
         },
+        draft: true,
         prerelease: false,
-        draft: true, // ✅ creates as draft release
       },
     },
   ],
+
   plugins: [
     {
       name: "@electron-forge/plugin-auto-unpack-natives",

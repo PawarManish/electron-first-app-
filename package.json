@@ -1,12 +1,12 @@
 {
   "name": "demo_project",
-  "version": "1.0.0",
   "description": "hello world",
   "license": "ISC",
   "author": "manish pawar",
+  "version": "1.0.2",
   "repository": {
     "type": "git",
-    "url": "https://github.com/PawarManish/electron-first-app.git"
+    "url": "https://github.com/PawarManish/electron-first-app-.git"
   },
   "type": "commonjs",
   "main": "main.js",
@@ -16,6 +16,9 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish"
+  },
+  "config": {
+    "forge": "./forge.config.js"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.8.1",
@@ -30,6 +33,7 @@
     "electron": "^37.1.0"
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.1"
+    "electron-squirrel-startup": "^1.0.1",
+    "tesseract.js": "^6.0.1"
   }
 }

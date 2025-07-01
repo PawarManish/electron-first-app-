@@ -7,3 +7,7 @@ contextBridge.exposeInMainWorld("versions", {
   ping: () => ipcRenderer.invoke("ping"),
   // we can also expose variables, not just functions
 });
+
+contextBridge.exposeInMainWorld("appAPI", {
+  createFolderForPin: (pin) => ipcRenderer.send("create-folder", pin),
+});
